@@ -9,5 +9,18 @@ public class CrabWorld extends World
     public CrabWorld() 
     {
         super(560, 560, 1);
+        prepare();
+    }
+    
+    /**
+     * Prepare the world for the start of the program.
+     * That is: create the initial objects and add them to the world.
+     */
+    private void prepare()
+    {
+
+        Lobster lobster = new Lobster();
+        addObject(lobster,243,190);
     }
 }
+    
