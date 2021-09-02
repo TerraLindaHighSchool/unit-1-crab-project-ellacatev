@@ -7,15 +7,17 @@ public class Crab extends Actor
 {
     public void act()
     {
-                move(-3);
-         turnAtEdge();
-         checkKeyPress();
-         onCollision();
+        move(0);
+        turnAtEdge();
+        checkKeyPress();
+        onCollision();
+        getY();
+        getX();
 
     }//This method repeats the following actions public void act()
-    
+
     //Moves the Crab 
-    
+
     //Turns the Crab at the edge 
     private void turnAtEdge()
     {
@@ -28,16 +30,26 @@ public class Crab extends Actor
     //Checks for user key presses so user can turn the Crab 
     private void checkKeyPress()
     {
-        if(Greenfoot.isKeyDown("right"))
+        if(Greenfoot.isKeyDown("D"))
         {
-            turn(30);
+            setLocation(getX() +3,getY());
         }
-        
-        if(Greenfoot.isKeyDown("left"))
+
+        if(Greenfoot.isKeyDown("A"))
         {
-            turn(-4);
+            setLocation(getX() -3,getY());
         }
+
+        if(Greenfoot.isKeyDown("W"))
+        {
+            setLocation(getX(),getY() -3);
         }
+
+        if(Greenfoot.isKeyDown("S"))
+        {
+            setLocation(getX(),getY() +3);
+        }
+    }
     //Checks for collisions with other objects 
     private void onCollision()
     {
@@ -45,7 +57,7 @@ public class Crab extends Actor
         {
             removeTouching(Worm.class);
             Greenfoot.playSound("slurp.wav");
-                      
+
             // *** Winning the game *******************
             if(getWorld().getObjects(Worm.class).size() == 0)
             {
@@ -54,21 +66,17 @@ public class Crab extends Actor
                 Greenfoot.stop();
             }
             // *****************************************
-        
+
         }
-         if(isTouching(Lobster.class))
+        if(isTouching(Lobster.class))
         {
             Greenfoot.playSound("au.wav");
             Greenfoot.playSound("slurp.wav");
         }
     }
-    }
-   
-    
-    
-    
-    
-    
+}
 
+    
+    
 
 
