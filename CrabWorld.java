@@ -21,6 +21,16 @@ public class CrabWorld extends World
 
         Lobster lobster = new Lobster();
         addObject(lobster,243,190);
+        Crab crab = new Crab();
+        addObject(crab,412,166);
+        Worm worm = new Worm();
+        addObject(worm,194,326);
+        Worm worm2 = new Worm();
+        addObject(worm2,429,444);
+        Worm worm3 = new Worm();
+        addObject(worm3,82,85);
+        Worm worm4 = new Worm();
+        addObject(worm4,404,80);
     }
 }
     
