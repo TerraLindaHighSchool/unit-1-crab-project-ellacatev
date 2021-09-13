@@ -1,12 +1,13 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
+
 /**
- * Lobster is th enemy of the Crab 
+ * polarbear is th enemy of the seal
  * 
  * @author Ella Velyvis 
  * @version 8/31/21
  */
-public class Lobster extends Actor
+public class polarbear extends Actor
 {
     //This method repeats the following actions 
     public void act()
@@ -15,7 +16,7 @@ public class Lobster extends Actor
         turnAtEdge();
     }
     
-    //Turns the Crab at the edge
+    //Turns the seal at the edge
     private void turnAtEdge()
     {
         if(isAtEdge())
@@ -24,3 +25,4 @@ public class Lobster extends Actor
         }
     }
 }
+

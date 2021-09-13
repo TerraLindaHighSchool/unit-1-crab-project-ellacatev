@@ -1,9 +1,9 @@
-import greenfoot.*;
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * This class defines a crab. Crabs live on the beach.
  */
-public class Crab extends Actor
+public class seal extends Actor
 {
     public void act()
     {
@@ -53,13 +53,13 @@ public class Crab extends Actor
     //Checks for collisions with other objects 
     private void onCollision()
     {
-        if(isTouching(Worm.class))
+        if(isTouching(fish.class))
         {
-            removeTouching(Worm.class);
+            removeTouching(fish.class);
             Greenfoot.playSound("slurp.wav");
 
             // *** Winning the game *******************
-            if(getWorld().getObjects(Worm.class).size() == 0)
+            if(getWorld().getObjects(fish.class).size() == 0)
             {
                 Greenfoot.setWorld(new WinSplash());
                 Greenfoot.playSound("fanfare.wav");
@@ -68,15 +68,11 @@ public class Crab extends Actor
             // *****************************************
 
         }
-        if(isTouching(Lobster.class))
+        if(isTouching(polarbear.class))
         {
             Greenfoot.playSound("au.wav");
             Greenfoot.playSound("slurp.wav");
         }
     }
 }
-
-    
-    
-
 
