@@ -61,7 +61,7 @@ public class seal extends Actor
             // *** Winning the game *******************
             if(getWorld().getObjects(fish.class).size() == 0)
             {
-                Greenfoot.setWorld(new WinSplash());
+                Greenfoot.setWorld(new winscreen());
                 Greenfoot.playSound("fanfare.wav");
                 Greenfoot.stop();
             }
